@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import os
 import openai
 from flask_cors import CORS
+from flask_pymongo import PyMongo
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from routes.AI import (
@@ -15,6 +16,8 @@ from routes.AI import (
 
 app = Flask(__name__)
 CORS(app)
+
+mongo = PyMongo(app)
 
 @app.route('/')
 def welcome():
