@@ -1,0 +1,25 @@
+<div class="chat-container">
+    <div class="chat-messages" #chatMessages>
+      <ng-container *ngIf="!loading; else loader">
+        <ng-container *ngFor="let message of messages">
+          <div *ngIf="message.role === 'user'" class="user-message">
+            {{ message.content }}
+          </div>
+          <div *ngIf="message.role === 'assistant'" class="server-message" >
+            {{ message.content }}
+          </div>
+        </ng-container>
+        <div *ngIf="typing">Typing...</div>
+      </ng-container>
+    </div>
+  
+    <ng-template #loader>
+      <div class="loader" *ngIf="!connected">Loading...</div>
+    </ng-template>
+  
+    <div class="chat-input">
+      <input type="text" [(ngModel)]="newMessage" placeholder="Type your message..." (keydown.enter)="sendMessage()" />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+  

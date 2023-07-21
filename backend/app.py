@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 import os
 import openai
 from flask_cors import CORS
-from flask_pymongo import PyMongo
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from routes.AI import (
@@ -17,11 +16,9 @@ from routes.AI import (
 app = Flask(__name__)
 CORS(app)
 
-mongo = PyMongo(app)
-
 @app.route('/')
 def welcome():
-    return 'Welcome to Parent Guide!'
+    return jsonify({'message':'Welcome to parent-guide', 'ok':True})
 
 limiter = Limiter(
     get_remote_address,
@@ -42,14 +39,19 @@ app.route('/audio', methods=['POST'])(audio)
 def chat():
     message = request.json["prompt"]
     api_key = os.getenv("OPENAI_API_KEY")
-
+    past_messages = request.json['past_message']
     prompt = [
         {
             "role": "system",
             "content": os.getenv('PROMPT'),
-        },
-        {"role": "user", "content": f"{message}. Try to give the heart to heart, emotionfull response of this question, and also complete it around 100 words and if possible complete it in less than 100 words."},
+        }
     ]
+    if len(past_messages) >= 1 :
+        for message in past_messages:
+            prompt.append(message)
+            
+    
+    prompt.append({"role": "user", "content": f"Question: {message}. ### You need to ask the clarification question regarding the given question for clear clarification and creative answers, also first just ask the clarification question and if something is not properly mentioned in the question asked by the user and after getting the solution of the clarification question only then answer should be given based on this, also try to give emotional, heart to heart felt answers in around 100 words only. if you are asking clarification question try to keep the response as short as possible ###"})
 
     try:
         completion = openai.ChatCompletion.create(

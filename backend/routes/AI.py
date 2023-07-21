@@ -29,13 +29,13 @@ def tune_list():
 def test():
     prompt = request.json['prompt']
     # Set your API key here
-    openai.api_key = os.getenv('OPENAI_API_KEY')
+    openai.api_key = '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'
 
     response = openai.Completion.create(
-        model="curie:ft-personal-2023-07-19-14-24-24",  # Replace with your fine-tuned model ID
+        model="davinci:ft-personal:sdata-2023-07-20-23-03-28",  # Replace with your fine-tuned model ID
         prompt=prompt,
         max_tokens=150,  # You can adjust the max_tokens parameter as needed
-        temperature=0.7,  # Adjust the temperature for more random or conservative outputs
+        temperature=1,  # Adjust the temperature for more random or conservative outputs
         stop=None,  # You can specify a stopping condition if needed
         frequency_penalty=0.0,
         presence_penalty=0.0
