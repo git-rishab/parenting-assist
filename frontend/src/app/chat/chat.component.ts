@@ -11,7 +11,7 @@ export class ChatComponent {
   loading: boolean = true; // Initialize the loading flag to true
   connected: boolean = false; // Initialize the connected flag to false
   typing: boolean = false; // Initialize the typing flag to false
-  url : string = 'http://localhost:5000'
+  url : string = 'https://parent-guide.onrender.com'
   messages: { content: string; role: 'user' | 'assistant' }[] = []; // Array to store messages and their origin
 
   constructor() {
