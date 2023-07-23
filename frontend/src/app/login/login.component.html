@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="left-half transition1">
+      <h2>Charting the Course of Parenthood</h2>
+      <h3>Log In!</h3>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            formControlName="password"
+            required
+          />
+        </div>
+        <input type="submit" *ngIf="!loading" value="Log In">
+      <input type="submit" *ngIf="loading" value="Loading...">
+      </form>
+    </div>
+  <div class="right-half transition2">
+    <!-- Replace 'YOUR_GIF_URL' with the URL of the GIF you want to display -->
+    <img [src]="illustration" alt="Showcase GIF" />
+  </div>
+</div>

@@ -1,0 +1,33 @@
+nav{
+    width: 100%;
+    background-color: #456187;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height: 1.5rem;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+nav > div:nth-child(2){
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav > div:nth-child(2) > div:hover{
+    cursor: pointer;
+    color: #dde3eb;
+}
+.logout{
+    background-color: rgb(226, 123, 123);
+    color: #fff;
+    padding: 9px 14px;
+    border-radius: 3px;
+    border: none;
+}
+.logout:hover{
+    background-color: rgb(223, 89, 89);
+}

@@ -1,0 +1,14 @@
+<nav>
+    <div (click)="redirect('')">
+        <!-- Logo -->
+        <img src="" alt="Parent Guide">
+    </div>
+    <div>
+        <div (click)="redirect('')">Home</div>
+        <div *ngIf="!user" (click)="redirect('/login')">Login</div>
+        <div *ngIf="!user" (click)="redirect('/register')">Signup</div>
+        <div *ngIf="user" (click)="redirect('/chat')">Chat</div>
+        <div *ngIf="user" (click)="redirect('/chat')">Hello {{user.name}}</div>
+        <div *ngIf="user" (click)="logout()" class="logout">Log Out</div>
+    </div>
+</nav>

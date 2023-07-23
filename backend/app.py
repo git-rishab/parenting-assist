@@ -13,6 +13,11 @@ from routes.AI import (
     audio
 )
 
+from routes.users import (
+    login,
+    register
+)
+
 app = Flask(__name__)
 CORS(app)
 
@@ -33,6 +38,8 @@ app.route('/list', methods=['GET'])(tune_list)
 app.route('/detail', methods=['GET'])(training_detail)
 app.route('/test', methods=['POST'])(test)
 app.route('/audio', methods=['POST'])(audio)
+app.route('/login', methods=['POST'])(login)
+app.route('/register', methods=['POST'])(register)
 
 @app.route("/chat", methods=["POST"])
 @limiter.limit("10 per 5 minute", error_message='Rate limit exceeded')

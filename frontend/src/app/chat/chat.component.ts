@@ -11,14 +11,14 @@ export class ChatComponent {
   loading: boolean = true; // Initialize the loading flag to true
   connected: boolean = false; // Initialize the connected flag to false
   typing: boolean = false; // Initialize the typing flag to false
-  url : string = 'https://parent-guide.onrender.com'
+  url : string = 'https://thoughtful-pear-nightshirt.cyclic.app' // 'https://parent-guide.onrender.com'
   messages: { content: string; role: 'user' | 'assistant' }[] = []; // Array to store messages and their origin
 
   constructor() {
     // Simulate connection to the server with a delay (replace this with actual server communication)
     fetch(this.url).then((raw)=>raw.json()).then((data)=>{
       this.loading = false; // Hide the loading message after connection is established
-      this.messages.push({content:'Welcome to Parent-Guide, How may I help you?', role:'assistant'})
+      this.messages.push({content:'Welcome to Parenting Assist! How may I help you?', role:'assistant'})
       this.connected = true;
     })
   }
