@@ -11,7 +11,7 @@ import { NotifierService } from 'angular-notifier';
 })
 export class LoginComponent {
   illustration: string = 'assets/illustration6.png';
-  url : string = 'https://thoughtful-pear-nightshirt.cyclic.app';
+  url : string = 'https://parent-guide.onrender.com';
   loading: Boolean = false
   private readonly notifier: NotifierService;
   signupForm: FormGroup = this.formBuilder.group({
