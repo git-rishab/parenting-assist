@@ -40,7 +40,7 @@ To get started with the Parenting Assist Application, follow the steps below.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/git-rishab/car-rental-application.git
+   git clone https://github.com/git-rishab/parent-guide.git
   
 2. Install Dependencies:
 
