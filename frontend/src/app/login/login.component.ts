@@ -11,7 +11,7 @@ import { NotifierService } from 'angular-notifier';
 })
 export class LoginComponent {
   illustration: string = 'assets/illustration6.png';
-  url : string = 'http://localhost:5000';
+  url : string = 'https://thoughtful-pear-nightshirt.cyclic.app';
   loading: Boolean = false
   private readonly notifier: NotifierService;
   signupForm: FormGroup = this.formBuilder.group({

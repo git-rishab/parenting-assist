@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
   illustration: string = 'assets/illustration2.png';
-  url : string = 'http://localhost:5000';
+  url : string = 'https://thoughtful-pear-nightshirt.cyclic.app';
   loading: Boolean = false
   private readonly notifier: NotifierService;
   signupForm: FormGroup = this.formBuilder.group({
