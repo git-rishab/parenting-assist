@@ -76,13 +76,13 @@ Below is the Schema Design of the Application
 ![Screenshot (649)](https://github.com/git-rishab/parent-guide/assets/114337213/ea54f855-0c16-42fa-b7e3-877468efdd18)
 
 ## Glimpse of Website
-- Landing Interface
+### Landing Interface
 ![Screenshot (650)](https://github.com/git-rishab/parent-guide/assets/114337213/ea20cd44-ad0e-4f9c-9449-e60ab0d87efb)
-- Login Interface
+### Login Interface
 ![Screenshot (651)](https://github.com/git-rishab/parent-guide/assets/114337213/a06dc4ef-677d-4e75-9c9c-9dc8d89a224c)
-- Register Interface
+### Register Interface
 ![Screenshot (![Screenshot (653)](https://github.com/git-rishab/parent-guide/assets/114337213/27d737fd-cc21-459c-a7ea-22296270af8a)
 652)](https://github.com/git-rishab/parent-guide/assets/114337213/47ed4169-2e27-40a7-a6c3-3e98f7a89dfa)
-- Chat Interface
+### Chat Interface
 ![Screenshot (653)](https://github.com/git-rishab/parent-guide/assets/114337213/e3164c39-41e6-4b15-bae2-4dcbbfb04188)
 
